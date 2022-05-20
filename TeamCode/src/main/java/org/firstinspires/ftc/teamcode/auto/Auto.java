@@ -29,11 +29,11 @@ public class Auto extends OpMode {
     @Override
     public void loop() {
         //Checks if task has been executed once
-        if (!complete){
+        if (!complete) {
             //Sets motor to half power
             motor.setPower(0.5);
 
-            //Attempts to wait 1 second but will do nothing if interupted
+            //Attempts to wait 1 second but will do nothing if interrupted
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
