@@ -12,7 +12,7 @@ public class LinearAuto extends LinearOpMode {
 
     //This is being run when "init" is pressed
     @Override
-    public void runOpMode() {
+    public void runOpMode() throws InterruptedException {
         //This obtains the motor
         motor = hardwareMap.get(DcMotor.class, "motor");
 
@@ -26,11 +26,7 @@ public class LinearAuto extends LinearOpMode {
         motor.setPower(0.5);
 
         //This try catch will attempt to wait 1 second but will instead do nothing if interupted
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        Thread.sleep(1000);
 
         //This will stop the motor
         motor.setPower(0);
